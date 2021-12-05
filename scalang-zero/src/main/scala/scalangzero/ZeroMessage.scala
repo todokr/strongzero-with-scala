@@ -1,7 +1,9 @@
 package scalangzero
 
+case class Topic(value: String) extends AnyVal
+
 case class ZeroMessage(
     id: String,
-    messageType: String,
-    message: Seq[Byte]
+    topic: Topic,
+    rawMessage: Seq[Byte]
 )
